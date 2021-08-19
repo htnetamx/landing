@@ -8,6 +8,23 @@ var delegacion_boton=document.getElementById("delegacion")
 var colonia_boton=document.getElementById("colonia")
 var tienda_boton=document.getElementById("tienda")
 
+window.onresize=Adjustbottons;
+Adjustbottons();
+
+function Adjustbottons(){
+
+    if (window.innerWidth > 575) {
+        document.getElementById("Comprar_Con_Nosotros").style.width="50%"
+        document.getElementById("Vender_Con_Nosotros").style.width="50%"
+    }
+    else {
+        document.getElementById("Comprar_Con_Nosotros").style.width="100%"
+        document.getElementById("Vender_Con_Nosotros").style.width="100%"
+    }
+
+}
+
+
 function fillAndShowDelegaciones(){
     var x = document.getElementById("DDelegacion");
     if (x.style.display === "none") {
